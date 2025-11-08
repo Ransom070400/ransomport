@@ -10,12 +10,22 @@ const projects = [
     demo: 'https://muse-364595.netlify.app/'
   },
   {
-    title: 'FlowX',
+    title: 'Flow',
     description: 'A cross-border liquidity protocol for stablecoins on Sui, solving remittance and liquidity challenges in Africa.',
     image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab//flow.webp',
     github: 'https://github.com/Ransom070400/flowx_npm_package.git',
     demo: 'https://flow-x-landing-page.vercel.app/'
   },
+
+
+    {
+    title: 'Pingou',
+    description: 'A cross-border liquidity protocol for stablecoins on Sui, solving remittance and liquidity challenges in Africa.',
+    image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/pingou/Image%20(1).png',
+    github: 'https://github.com/Ransom070400/pingou.git',
+    demo: 'pingou.live'
+  },
+
   {
     title: 'Bingo',
     description: 'A decentralized Web3 site that connects wastes to recyclers.',

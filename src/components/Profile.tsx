@@ -18,7 +18,7 @@ export function Profile() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              src="https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab//WhatsApp%20Image%202025-02-20%20at%2017.01.20_a8078254.jpg"
+              src="https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab/DSC08367.jpg"
               alt="Profile"
               className="rounded-2xl shadow-2xl"
             />
@@ -43,8 +43,7 @@ export function Profile() {
               viewport={{ once: true }}
               className="text-gray-300"
             >
-               Eze Ransom Cherechi Co-founder of Code-X Lab and a passionate Web3 developer with extensive experience in blockchain technology, DeFi, and NFTs. Leading innovation in the Web3 space through groundbreaking projects and community initiatives.
-            </motion.p>
+I’m Eze Ransom, a Web3 developer, project manager, and community builder passionate about helping African developers grow and create real impact with blockchain. I lead Code-X Lab and founded DevNest, a space where students and young builders connect, collaborate, and turn ideas into reality. Over the years, I’ve worked closely with ecosystems like Arbitrum, Core DAO, Avalanche, and Sui , hosting events, leading teams, and pushing the boundaries of what’s possible in the African tech scene. For me, it’s all about building, teaching, and creating opportunities that move the continent forward.            </motion.p>
 
             <div className="grid grid-cols-2 gap-4">
               {[
