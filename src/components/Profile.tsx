@@ -43,14 +43,14 @@ export function Profile() {
               viewport={{ once: true }}
               className="text-gray-300"
             >
-I’m Eze Ransom, a Web3 developer, project manager, and community builder passionate about helping African developers grow and create real impact with blockchain. I lead Code-X Lab and founded DevNest, a space where students and young builders connect, collaborate, and turn ideas into reality. Over the years, I’ve worked closely with ecosystems like Arbitrum, Core DAO, Avalanche, and Sui , hosting events, leading teams, and pushing the boundaries of what’s possible in the African tech scene. For me, it’s all about building, teaching, and creating opportunities that move the continent forward.            </motion.p>
+I’m Eze Ransom, a Web3 developer, ecosystem growth strategist, and community builder from Nigeria. I’ve built and shipped real products across multiple blockchain ecosystems, worked with Core and Sui, and I currently work with Zero Gravity, a leading AI Layer-1. Beyond building, I host and lead developer events, onboard hundreds of builders, and focus on creating products and communities that actually deliver value across Africa.            </motion.p>
 
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: Code2, title: 'Web3 Dev', desc: 'Smart Contracts & DeFi' },
-                { icon: Trophy, title: 'Awards', desc: 'Blockathon Winner' },
-                { icon: Globe2, title: 'Community', desc: 'TechNest UNN Lead' },
-                { icon: Award, title: 'Speaker', desc: 'TechXel by GDSC UNN' },
+                { icon: Trophy, title: 'Awards', desc: 'Tutor of the Year' },
+                { icon: Globe2, title: 'Community', desc: '0G Ng and Africa' },
+                { icon: Award, title: 'Job', desc: 'Leading 0G Initiative in Nigeria' },
               ].map((item, index) => (
                 <motion.div
                   key={index}

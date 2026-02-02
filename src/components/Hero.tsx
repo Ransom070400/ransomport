@@ -15,7 +15,7 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        Web3 Freak
+        Web3 Guy
       </motion.h1>
       
       <motion.p 
@@ -24,7 +24,7 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        Bridging Web3  & Real-World Impact
+        Shiping Cool Stuffs 
       </motion.p>
       
       <motion.div 
@@ -53,7 +53,7 @@ export function Hero() {
         <a href="https://www.linkedin.com/in/eze-ransom-281640295" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
           <Linkedin size={24} />
         </a>
-        <a href="https://x.com/eze_ransom" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+        <a href="https://x.com/ezeransome" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
           <Twitter size={24} />
         </a>
       </motion.div>
