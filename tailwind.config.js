@@ -4,7 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
+        base: '#0a0a0a',
+        surface: '#111111',
+        border: '#1a1a1a',
+        muted: '#888888',
+        accent: '#c8c8c8',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },

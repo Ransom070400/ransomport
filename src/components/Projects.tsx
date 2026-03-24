@@ -1,103 +1,106 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Metamuse',
-    description: 'A Web3 platform for artists to collaborate, mint NFTs, and auction their artwork. ',
-    image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab//WhatsApp%20Image%202025-01-29%20at%2012.57.39_ea53122f.jpg',
-    github: 'https://github.com/Ransom070400/METAMUSE1.git',
-    demo: 'https://muse-364595.netlify.app/'
-  },
-  {
-    title: 'Flow',
-    description: 'A cross-border liquidity protocol for stablecoins on Sui, solving remittance and liquidity challenges in Africa.',
-    image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab//flow.webp',
-    github: 'https://github.com/Ransom070400/flowx_npm_package.git',
-    demo: 'https://flow-x-landing-page.vercel.app/'
-  },
-
-
-    {
     title: 'Pingou',
-    description: 'A cross-border liquidity protocol for stablecoins on Sui, solving remittance and liquidity challenges in Africa.',
-    image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/pingou/Image%20(1).png',
+    description: 'Smart networking app — share profiles via QR/NFC at events with gamified networking and on-chain identity.',
+    stack: ['React Native', 'Node.js', 'NFC', 'Web3'],
+    href: 'https://pingou.live',
     github: 'https://github.com/Ransom070400/pingou.git',
-    demo: 'pingou.live'
   },
-
   {
-    title: 'Bingo',
-    description: 'A decentralized Web3 site that connects wastes to recyclers.',
-    image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab//Bingo.jpg',
-    github: 'https://github.com/Ransom070400/BinGO1.git',
-    demo: 'https://5ostl-faaaa-aaaah-aq3pq-cai.icp0.io/'
+    title: 'FlowX',
+    description: 'Cross-border stablecoin liquidity protocol on Sui. Solving remittance and liquidity challenges in Africa.',
+    stack: ['Sui', 'Move', 'TypeScript', 'DeFi'],
+    href: 'https://flow-x-landing-page.vercel.app/',
+    github: 'https://github.com/Ransom070400/flowx_npm_package.git',
   },
   {
     title: 'VeriChain',
-    description: 'A KYC app that enables you to do your KYC once and reuse it anytime.',
-    image: 'https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab//veri.jpg',
+    description: 'On-chain KYC — verify your identity once, reuse it securely across any platform. Identity ownership, not rental.',
+    stack: ['Solidity', 'React', 'ZK Proofs', 'Walrus'],
+    href: 'https://verichain-site-ywgs.vercel.app',
     github: 'https://github.com/Ransom070400/Verichain-site.git',
-    demo: 'https://verichain-site-ywgs.vercel.app'
+  },
+  {
+    title: 'Metamuse',
+    description: 'Collaborative art + NFT marketplace. Artists co-create, mint, and monetize their work on-chain.',
+    stack: ['React', 'Solidity', 'IPFS', 'NFT'],
+    href: 'https://muse-364595.netlify.app/',
+    github: 'https://github.com/Ransom070400/METAMUSE1.git',
+  },
+  {
+    title: 'BinGO',
+    description: 'Decentralized waste-to-recycler marketplace. Connecting waste producers to recyclers on ICP.',
+    stack: ['Internet Computer', 'Motoko', 'React'],
+    href: 'https://5ostl-faaaa-aaaah-aq3pq-cai.icp0.io/',
+    github: 'https://github.com/Ransom070400/BinGO1.git',
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="min-h-screen py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+    <section id="work" className="py-32 px-6">
+      <div className="max-w-[1200px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-12"
+          className="mb-16"
         >
-          Featured Projects
-        </motion.h2>
+          <p className="text-[13px] text-white/30 tracking-widest uppercase mb-3">Portfolio</p>
+          <h2 className="text-3xl font-bold tracking-tight text-white">Selected Work</h2>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
+        <div className="flex flex-col">
+          {projects.map((project, i) => (
+            <motion.a
+              key={project.title}
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
               viewport={{ once: true }}
-              className="group relative bg-white/5 rounded-xl overflow-hidden backdrop-blur-sm"
+              className="group flex items-start justify-between py-8 border-t border-white/[0.06] hover:border-white/[0.12] transition-colors duration-300"
             >
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-                <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Github size={16} />
-                    GitHub
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-xl font-semibold text-white/90 group-hover:text-white transition-colors duration-200">
+                    {project.title}
+                  </h3>
+                  <ArrowUpRight
+                    size={16}
+                    className="text-white/0 group-hover:text-white/40 -translate-y-0.5 translate-x-0 group-hover:-translate-y-1 group-hover:translate-x-0.5 transition-all duration-300"
+                  />
+                </div>
+                <p className="text-[15px] text-white/35 leading-relaxed max-w-[500px]">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.stack.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[11px] text-white/25 tracking-wide uppercase px-2 py-0.5 rounded border border-white/[0.06]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
-            </motion.div>
+
+              <div className="hidden sm:flex items-center gap-4 ml-8 mt-1">
+                <span
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.github, '_blank'); }}
+                  className="text-[12px] text-white/20 hover:text-white/50 transition-colors cursor-pointer"
+                >
+                  Source
+                </span>
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>

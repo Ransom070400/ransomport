@@ -1,79 +1,37 @@
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Send } from 'lucide-react';
 
 export function Contact() {
   return (
-    <section id="contact" className="min-h-screen py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <footer id="contact" className="py-24 px-6 border-t border-white/[0.04]">
+      <div className="max-w-[1200px] mx-auto">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12"
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-8"
         >
-          <div className="text-center mb-12">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold mb-4"
+          <div>
+            <p className="text-[13px] text-white/30 tracking-widest uppercase mb-3">Get in touch</p>
+            <a
+              href="mailto:ezeransome@gmail.com"
+              className="text-2xl sm:text-3xl font-bold tracking-tight text-white/80 hover:text-white transition-colors duration-200"
             >
-              Let's Connect
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-gray-400"
-            >
-              Have a project in mind? Let's discuss how we can work together.
-            </motion.p>
+              ezeransome@gmail.com
+            </a>
           </div>
 
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <div>
-              <label htmlFor="email" className="flex gap-2 items-center text-gray-300 mb-2">
-                <Mail size={16} />
-                Your Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full bg-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                placeholder="name@example.com"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="flex gap-2 items-center text-gray-300 mb-2">
-                <MessageSquare size={16} />
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full bg-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                placeholder="Your message..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-medium py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
-            >
-              <Send size={16} />
-              Send Message
-            </button>
-          </motion.form>
+          <div className="flex items-center gap-6 text-[13px] text-white/25">
+            <a href="https://github.com/Ransom070400" target="_blank" rel="noreferrer" className="hover:text-white/50 transition-colors">GitHub</a>
+            <a href="https://x.com/ezeransome" target="_blank" rel="noreferrer" className="hover:text-white/50 transition-colors">X</a>
+            <a href="https://www.linkedin.com/in/eze-ransom-281640295" target="_blank" rel="noreferrer" className="hover:text-white/50 transition-colors">LinkedIn</a>
+          </div>
         </motion.div>
+
+        <div className="mt-16 pt-6 border-t border-white/[0.04] text-[12px] text-white/15">
+          &copy; {new Date().getFullYear()} Ransom Cherechi
+        </div>
       </div>
-    </section>
+    </footer>
   );
 }

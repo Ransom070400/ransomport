@@ -1,36 +1,31 @@
-import { useEffect, useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 
 export function Background() {
-  const pointsRef = useRef<THREE.Points>(null);
-  
-  useEffect(() => {
-    if (!pointsRef.current) return;
-    
-    const geometry = new THREE.BufferGeometry();
-    const vertices = [];
-    
-    for (let i = 0; i < 5000; i++) {
-      const x = THREE.MathUtils.randFloatSpread(2000);
-      const y = THREE.MathUtils.randFloatSpread(2000);
-      const z = THREE.MathUtils.randFloatSpread(2000);
-      vertices.push(x, y, z);
-    }
-    
-    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-    pointsRef.current.geometry = geometry;
-  }, []);
-  
-  useFrame((state) => {
-    if (!pointsRef.current) return;
-    pointsRef.current.rotation.x += 0.0002;
-    pointsRef.current.rotation.y += 0.0001;
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  const geometry = useMemo(() => new THREE.TorusKnotGeometry(1.8, 0.6, 128, 32), []);
+
+  useFrame(({ clock }) => {
+    if (!meshRef.current) return;
+    meshRef.current.rotation.x = clock.getElapsedTime() * 0.08;
+    meshRef.current.rotation.y = clock.getElapsedTime() * 0.12;
   });
-  
+
   return (
-    <points ref={pointsRef}>
-      <pointsMaterial size={1.5} color="#4fc3dc" transparent opacity={0.8} />
-    </points>
+    <>
+      <ambientLight intensity={0.15} />
+      <directionalLight position={[5, 5, 5]} intensity={0.3} color="#ffffff" />
+      <pointLight position={[-5, -5, 5]} intensity={0.1} color="#888888" />
+      <mesh ref={meshRef} geometry={geometry} position={[0, 0, 0]}>
+        <meshStandardMaterial
+          color="#1a1a1a"
+          wireframe
+          transparent
+          opacity={0.35}
+        />
+      </mesh>
+    </>
   );
 }

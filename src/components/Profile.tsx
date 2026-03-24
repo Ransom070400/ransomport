@@ -1,73 +1,40 @@
 import { motion } from 'framer-motion';
-import { Award, Code2, Globe2, Trophy } from 'lucide-react';
 
 export function Profile() {
   return (
-    <section id="profile" className="min-h-screen py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center"
-        >
-          <div className="relative">
-            <motion.img
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              src="https://cocozqaswhyugfbilbxk.supabase.co/storage/v1/object/public/Codex-Lab/DSC08367.jpg"
-              alt="Profile"
-              className="rounded-2xl shadow-2xl"
-            />
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-2xl -z-10" />
-          </div>
+    <section id="about" className="py-32 px-6">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-[13px] text-white/30 tracking-widest uppercase mb-3">About</p>
+            <h2 className="text-3xl font-bold tracking-tight text-white">
+              Builder, community leader, and Web3 strategist — focused on Africa-first solutions.
+            </h2>
+          </motion.div>
 
-          <div className="space-y-6">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-4xl font-bold"
-            >
-              About Me
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-gray-300"
-            >
-I’m Eze Ransom, a Web3 developer, ecosystem growth strategist, and community builder from Nigeria. I’ve built and shipped real products across multiple blockchain ecosystems, worked with Core and Sui, and I currently work with Zero Gravity, a leading AI Layer-1. Beyond building, I host and lead developer events, onboard hundreds of builders, and focus on creating products and communities that actually deliver value across Africa.            </motion.p>
-
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: Code2, title: 'Web3 Dev', desc: 'Smart Contracts & DeFi' },
-                { icon: Trophy, title: 'Awards', desc: 'Tutor of the Year' },
-                { icon: Globe2, title: 'Community', desc: '0G Ng and Africa' },
-                { icon: Award, title: 'Job', desc: 'Leading 0G Initiative in Nigeria' },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-4 bg-white/5 rounded-lg backdrop-blur-sm"
-                >
-                  <item.icon className="w-8 h-8 text-cyan-400 mb-2" />
-                  <h3 className="font-semibold">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <p className="text-[15px] text-white/45 leading-[1.8]">
+              I design and build blockchain applications from scratch — smart contracts in Move and Solidity, full-stack dApps, wallet integration, zkLogin, and decentralized storage with Walrus. I focus on practical use cases: financial inclusion, identity ownership, social coordination, and real-world usability of blockchain.
+            </p>
+            <p className="text-[15px] text-white/45 leading-[1.8]">
+              Beyond code, I build ecosystems. I founded DevNest UNN, organize developer events and hackathons across cities like Enugu, Abuja, Uyo, PH, and Lagos, and lead the 0G Nigeria Builder Community. I've partnered with Avalanche, Core DAO, and Sui to bring builders into Web3. My events blend technical learning, vibecoding sessions, and real networking.
+            </p>
+            <p className="text-[15px] text-white/45 leading-[1.8]">
+              I led teams under Code-X Lab, shipping multiple hackathon-winning and production-ready projects. I think beyond code — adoption, distribution, community scaling. As a crypto trader, I bring economic awareness to everything I build. My edge: I combine builder + community leader + strategist, I execute fast, and I bridge Web2 users into Web3 seamlessly through ideas like zkLogin and QR onboarding.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

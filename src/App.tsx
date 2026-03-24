@@ -1,24 +1,21 @@
-import { Canvas } from '@react-three/fiber';
-import { Background } from './components/Background';
+import { Nav } from './components/Nav';
 import { Hero } from './components/Hero';
-import { Profile } from './components/Profile';
 import { Projects } from './components/Projects';
+import { Profile } from './components/Profile';
+import { Stack } from './components/Stack';
+import { Experience } from './components/Experience';
 import { Contact } from './components/Contact';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#0a0a0a]">
-      <div className="absolute inset-0">
-        <Canvas camera={{ position: [0, 0, 1000], fov: 45 }}>
-          <Background />
-        </Canvas>
-      </div>
-      <div className="relative">
-        <Hero />
-        <Profile />
-        <Projects />
-        <Contact />
-      </div>
+    <div className="relative bg-[#0a0a0a]">
+      <Nav />
+      <Hero />
+      <Projects />
+      <Profile />
+      <Stack />
+      <Experience />
+      <Contact />
     </div>
   );
 }
