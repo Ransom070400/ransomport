@@ -15,15 +15,15 @@ export function Background() {
 
   return (
     <>
-      <ambientLight intensity={0.15} />
-      <directionalLight position={[5, 5, 5]} intensity={0.3} color="#ffffff" />
-      <pointLight position={[-5, -5, 5]} intensity={0.1} color="#888888" />
+      <ambientLight intensity={0.4} />
+      <directionalLight position={[5, 5, 5]} intensity={0.8} color="#ffffff" />
+      <pointLight position={[-5, -5, 5]} intensity={0.3} color="#aaaaaa" />
       <mesh ref={meshRef} geometry={geometry} position={[0, 0, 0]}>
         <meshStandardMaterial
-          color="#1a1a1a"
+          color="#555555"
           wireframe
           transparent
-          opacity={0.35}
+          opacity={0.55}
         />
       </mesh>
     </>

@@ -5,8 +5,8 @@ import { Background } from './Background';
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6">
-      {/* 3D element — positioned right, bleeds off */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-60 pointer-events-none hidden lg:block">
+      {/* 3D element — full hero background */}
+      <div className="absolute inset-0 opacity-80 pointer-events-none">
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <Background />
         </Canvas>
