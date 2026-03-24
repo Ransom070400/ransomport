@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 const timeline = [
   {
-    role: '0G Nigeria Community Lead',
+    role: 'Leading 0G Adoption Across Nigeria and Africa',
     company: '0G (Zero Gravity)',
     period: 'Present',
-    description: 'Leading builder community and ecosystem growth across Nigeria for the AI Layer-1. Designing developer onboarding pipelines, organizing events, and expanding adoption in Enugu, Abuja, Uyo, PH, and Lagos.',
+    description: 'Driving builder community and ecosystem growth across Nigeria and the continent for the AI Layer-1. Designing developer onboarding pipelines, organizing events, and expanding adoption in Enugu, Abuja, Uyo, PH, and Lagos.',
   },
   {
     role: 'Technical Lead',
