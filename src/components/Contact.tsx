@@ -17,7 +17,7 @@ export function Contact() {
               href="mailto:ezeransome@gmail.com"
               className="text-2xl sm:text-3xl font-bold tracking-tight text-white/80 hover:text-white transition-colors duration-200"
             >
-              ezeransome@gmail.com
+              ransomeze654@gmail.com
             </a>
           </div>
 

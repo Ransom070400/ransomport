@@ -42,13 +42,13 @@ export function Profile() {
 
             <div className="space-y-6 mt-8">
               <p className="text-[15px] text-white/45 leading-[1.8]">
-                I design and build blockchain applications from scratch — smart contracts in Move and Solidity, full-stack dApps, wallet integration, zkLogin, and decentralized storage with Walrus. I focus on practical use cases: financial inclusion, identity ownership, social coordination, and real-world usability of blockchain.
+                I design and build blockchain applications from scratch  smart contracts in Move and Solidity, full-stack dApps, wallet integration, zkLogin, and decentralized storage with Walrus. I focus on practical use cases: financial inclusion, identity ownership, social coordination, and real-world usability of blockchain.
               </p>
               <p className="text-[15px] text-white/45 leading-[1.8]">
                 Beyond code, I build ecosystems. I founded DevNest UNN, organize developer events and hackathons across cities like Enugu, Abuja, Uyo, PH, and Lagos, and lead the 0G Nigeria Builder Community. I've partnered with Avalanche, Core DAO, and Sui to bring builders into Web3. My events blend technical learning, vibecoding sessions, and real networking.
               </p>
               <p className="text-[15px] text-white/45 leading-[1.8]">
-                I led teams under Code-X Lab, shipping multiple hackathon-winning and production-ready projects. I think beyond code — adoption, distribution, community scaling. As a crypto trader, I bring economic awareness to everything I build. My edge: I combine builder + community leader + strategist, I execute fast, and I bridge Web2 users into Web3 seamlessly through ideas like zkLogin and QR onboarding.
+                I led teams under Code-X Lab, shipping multiple hackathon-winning and production-ready projects. I think beyond code  adoption, distribution, community scaling. As a crypto trader, I bring economic awareness to everything I build. My edge: I combine builder + community leader + strategist, I execute fast, and I bridge Web2 users into Web3 seamlessly through ideas like zkLogin and QR onboarding.
               </p>
             </div>
           </motion.div>

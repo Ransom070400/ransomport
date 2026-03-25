@@ -33,7 +33,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
             className="mt-6 text-lg text-white/40 leading-relaxed max-w-[520px]"
           >
-            Web3 developer and ecosystem builder. I design and ship blockchain products, lead developer communities, and build Africa-first solutions — from DeFi protocols to on-chain identity systems.
+            Web3 developer and ecosystem builder. I design and ship blockchain products, lead developer communities, and build Africa-first solutions from DeFi protocols to on-chain identity systems.
           </motion.p>
 
           <motion.div
